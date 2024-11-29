@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![TODO](./public/images/screenshot.png)
+![](./public/images/screenshot.png)
 
 ### Links
 
 - Solution URL: [GitHub](https://github.com/navalBhagat/single-column-page-fe-mentor)
-- Live Site URL: [Vercel - TODO](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://single-column-page-fe-mentor.vercel.app/)
 
 ## Author
 

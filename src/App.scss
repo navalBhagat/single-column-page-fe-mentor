@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/* Variables */
+$blue: hsl(223, 87%, 63%);
+$paleBlue: hsl(223, 100%, 88%);
+$lightRed: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$darkBlue: hsl(209, 33%, 12%);
+$fontSize: 20px;
+$fontWeight300: 300;
+$fontWeight600: 600;
+$fontWeight700: 700;
+$fontFamily: 'Libre Franklin', sans-serif;
+
+.sr-only {
+    display: none;
+}
+
+/* Desktop Design */
+
+html {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight300;
+    color: $darkBlue;
+
+    body {
+        margin: 0;
+
+        #root {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5rem 0;
+
+            header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                h1 {
+                    font-size: 2.3rem;
+                    font-weight: $fontWeight300;
+                    color: $gray;
+                    margin-top: 2rem;
+
+                    strong {
+                        color: $darkBlue;
+                        font-weight: $fontWeight700;
+                    }
+                }
+
+                p {
+                    margin-top: -1rem;
+                    font-size: 0.95rem;
+                }
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                form {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.2rem;
+                    width: 35rem;
+                    position: relative;
+
+                    input {
+                        border: 1px solid hsla(223, 100%, 88%, 0.7);
+                        border-radius: 2rem;
+                        width: 17rem;
+                        height: 2.5rem;
+                        color: $darkBlue;
+                        font-size: 0.75rem;
+                        padding: 0rem 1.5rem;
+
+                        &::placeholder {
+                            color: hsla(223, 100%, 88%, 0.7);
+                        }
+                    }
+
+                    input.showError {
+                        border-color: $lightRed;
+                    }
+
+                    span {
+                        position: absolute;
+                        left: 4.3rem;
+                        bottom: -1rem;
+                        font-size: 0.6rem;
+                        color: $lightRed;
+                        font-style: italic;
+                    }
+
+                    button {
+                        cursor: pointer;
+                        border: none;
+                        border-radius: 2rem;
+                        width: 9rem;
+                        height: 2.5rem;
+                        background-color: $blue;
+                        color: white;
+                        box-shadow: 0rem 0.5rem 1rem hsla(223, 87%, 63%, 0.3);
+                        font-size: 0.75rem;
+                        font-family: $fontFamily;
+                        font-weight: $fontWeight600;
+
+                        &:hover {
+                            background-color: hsla(223, 87%, 63%, 0.8);
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                figure {
+                    width: 30rem;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 4rem;
+
+                    img {
+                        width: inherit;
+                        height: auto;
+                    }
+                }
+            }
+
+            footer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2rem;
+
+                nav {
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        li {
+                            border-radius: 50%;
+                            border: 1px solid lightgray;
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: $blue;
+                                cursor: pointer;
+
+                                i {
+                                    color: white;
+                                }
+                            }
+
+                            a {
+                                color: $blue;
+
+                                i {
+                                    font-size: 0.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    color: $gray;
+                    font-size: 0.55rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Design */
+
+@media (max-width:700px) {
+    html { 
+        width: 100%;
+        body {
+            width: 100%;
+            #root { 
+                width: 100%;
+                margin-bottom: 2rem;
+
+                header { 
+                    img { 
+                        width: 3rem;
+                    }
+
+                    h1 { 
+                        font-size: 1.2rem;
+                    }
+
+                    p { 
+                        font-size: 0.7rem;
+                        margin-top: 0.2rem;
+                    }
+                }
+                main { 
+                    width: 100%;
+                    form { 
+                        flex-direction: column;
+                        width: 80%;
+                        align-items: stretch;
+                        position: unset;
+
+                        input { 
+                            width: unset;
+                            height: 2.2rem;
+                        }
+
+                        button { 
+                           height: 2.2rem;
+                           width: 100%;
+                           font-size: 0.7rem;
+                        }
+
+                        span { 
+                            position: unset;
+                            left: unset;
+                            bottom: unset;
+                            margin-left: 2rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+
+                    figure { 
+                        width: 95%;
+                        margin-top: 2.2rem;
+                         
+                        img {
+                            width: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
